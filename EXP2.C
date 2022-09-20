@@ -1,22 +1,27 @@
-#include <stdio.h>
-#include <conio.h>
-#include <string.h>
+#include<stdio.h>
+#include<conio.h>
 void main() {
+int a[10], i, b=1, j=0, n,temp;
 clrscr();
-int a[5], num1, num2, i;
-printf("Enter the number of elements to form array: \n");
-scanf("%d", &num1);
-printf("Enter the elements: \n");
-for (i=1;i<=num1;i++) {
+printf("Enter the strength of the array: \n");
+scanf("%d:", &n);
+printf("Enter the elements of the array");
+for(i=0;i<n;i++) {
 scanf("%d", &a[i]);
 }
 printf("Enter the element to be searched: \n");
-scanf("%d", &num2);
-if(a[1]==num2 || a[2]==num2 || a[3]==num2 || a[4]==num2 || a[5]==num2) {
-printf("Element found!\n");
+scanf("%d", &temp);
+for(i=0;i<n;i++) {
+if(a[i]==temp) {
+printf("Element found\n");
+printf("Index = %d \n", i);
+printf("Position = %d \n", b);
+j=1;
 }
-else {
-printf("Element is invalid\n");
+b++;
+}
+if(j==0) {
+printf("Element not found!");
 }
 getch();
 }
